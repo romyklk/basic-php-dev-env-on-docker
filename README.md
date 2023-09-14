@@ -109,4 +109,19 @@ N'oubliez pas de vous assurer que votre fichier .env ne soit pas inclus dans vot
 
 
 
-     
+## Feedback
+
+Si vous avez des commentaires, veuillez me joindre par  [Email](mailto:romyklk2210@gmail.com) ou sur [Twitter](https://twitter.com/romyklk). Toutes contributions sont les bienvenues.
+
+
+## Auteur
+
+- [@romyklk](https://github.com/romyklk)
+
+
+## Badges
+
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
