@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# basic-php-dev-env-on-docker
-=======
 # Environement de développement PHP 8.2 basé sur DOCKER
 
 Dans ce projet vous trouverez un environement de développement PHP 8.2 basé sur Docker. Il est composé d'un container PHP 8.2 et Apache 2.4, d'un container MySQL 8.0 et d'un container phpMyAdmin.
@@ -110,7 +107,21 @@ Pour que cela marche  il faut ajouter les lignes suivantes dans le fichier `inde
 
 N'oubliez pas de vous assurer que votre fichier .env ne soit pas inclus dans votre gestionnaire de contrôle de version (par exemple, gitignore) car il contient des informations sensibles. Vous ne voulez pas que ces informations soient exposées ou partagées.
 
->>>>>>> 29585a4 (📦 NEW: Environement de développement PHP 8.2)
 
 
-     
+## Feedback
+
+Si vous avez des commentaires, veuillez me joindre par  [Email](mailto:romyklk2210@gmail.com) ou sur [Twitter](https://twitter.com/romyklk). Toutes contributions sont les bienvenues.
+
+
+## Auteur
+
+- [@romyklk](https://github.com/romyklk)
+
+
+## Badges
+
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
