@@ -7,6 +7,12 @@ RUN docker-php-ext-install pdo pdo_mysql
 # Installez Git
 RUN apt-get update && apt-get install -y git
 
+# Installez l'extension cURL 
+RUN apt-get update && apt-get install -y libcurl4-openssl-dev && docker-php-ext-install curl
+
+# Installez l'extension OPcache
+RUN docker-php-ext-install opcache
+
 # Installez Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 

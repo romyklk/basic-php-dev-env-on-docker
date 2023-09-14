@@ -10,8 +10,7 @@
 <style>
 
     body {
-        background-color: #F7A01C;
-        color: #fff;
+        color: black;
     }
 </style>
 
@@ -20,13 +19,31 @@
 
     echo "Hello World!";
     echo "Hello World!";
-
+    /* 
     $host = 'db'; // Utilisez le nom du service MySQL dans Docker Compose
     $port = 3306; // Port exposé dans Docker Compose
     $dbname = 'portfolio'; // Le nom de la base de données que vous avez créé
-    $username = 'romy'; // Utilisateur créé dans le conteneur Docker
-    $password = 'romy123'; // Mot de passe créé dans le conteneur Docker
+    $username = 'myacces'; // Utilisateur créé dans le conteneur Docker
+    $password = 'mysecret'; // Mot de passe créé dans le conteneur Docker */
+    echo "<h1>Test de connexion à la base de données</h1>";
 
+    require_once __DIR__ . '/vendor/autoload.php'; // Chargez l'autoloader Composer
+    use Dotenv\Dotenv;
+
+    $dotenv = Dotenv::createImmutable(__DIR__); // Créez une instance de Dotenv
+    $dotenv->load(); // Chargez les variables d'environnement depuis le fichier .env
+
+    // Exemple d'utilisation des variables d'environnement
+    $host = $_ENV['DB_HOST'];
+    $port = $_ENV['DB_PORT'];
+    $dbname = $_ENV['DB_DATABASE'];
+    $username = $_ENV['DB_USERNAME'];
+    $password = $_ENV['DB_PASSWORD'];
+
+// Vous pouvez maintenant utiliser ces variables pour la configuration de la base de données, par exemple.
+
+
+    
     try {
         $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
         // Le reste de votre code PDO
@@ -34,7 +51,7 @@
 
         var_dump($pdo);
     } catch (PDOException $e) {
-        echo "Erreur de connexion à la base de données : " . $e->getMessage();
+       die("Impossible de se connecter à la base de données $dbname :" . $e->getMessage());
     }
 
     $query = "SELECT * FROM `contacts`";

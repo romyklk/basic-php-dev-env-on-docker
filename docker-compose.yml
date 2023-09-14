@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile # permet de dire quel est le dockerfile
     container_name: webserver # permet de donner un nom au container
     ports: # permet de faire le lien entre le port du container et le port de la machine
-      - 8887:80 # port de la machine : port du container
+      - 9000:80 # port de la machine : port du container
     volumes: # permet de faire le lien entre le dossier de la machine et le dossier du container
       - /Applications/MAMP/htdocs/LEARNING/Docker/php-env:/var/www/html
     environment: # permet de définir les variables d'environnement
@@ -18,9 +18,9 @@ services:
     image: mysql:latest # permet de définir l'image à utiliser
     container_name: database # permet de donner un nom au container
     environment: # permet de définir les variables d'environnement
-      - MYSQL_DATABASE=portfolio # permet de définir le nom de la base de données
-      - MYSQL_USER=romy # permet de définir le nom de l'utilisateur
-      - MYSQL_PASSWORD=romy123 # permet de définir le mot de passe de l'utilisateur
+      - MYSQL_DATABASE=${DB_DATABASE} # permet de définir le nom de la base de données
+      - MYSQL_USER=${DB_USERNAME} # permet de définir le nom de l'utilisateur
+      - MYSQL_PASSWORD=${DB_PASSWORD} # permet de définir le mot de passe de l'utilisateur
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes # permet de définir si le mot de passe peut être vide
     volumes: # permet de faire le lien entre le dossier de la machine et le dossier du container
       - my_mysql_data:/var/lib/mysql 
@@ -34,10 +34,10 @@ services:
     image: phpmyadmin
     container_name: phpmyadmin
     environment:
-      - PMA_HOST=db # permet de définir le nom de l'hôte (ici, le container db) sur lequel phpmyadmin va se connecter
+      - PMA_HOST=${DB_HOST} # permet de définir le nom de l'hôte (ici, le container db) sur lequel phpmyadmin va se connecter
       - PMA_PORT=3306 # permet de définir le port sur lequel phpmyadmin va se connecter
     ports:
-      - 8889:80
+      - 9001:80
     depends_on:
       - db
     restart: always
