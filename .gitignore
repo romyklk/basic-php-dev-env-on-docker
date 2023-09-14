@@ -1,1 +1,7 @@
 Vous devez inclure ici le fichier .env qui contient les variables d'environnement suivantes
+
+/.DS_Store
+/.idea
+/.vscode
+/node_modules
+/.vendor

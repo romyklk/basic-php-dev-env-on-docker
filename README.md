@@ -124,4 +124,6 @@ Si vous avez des commentaires, veuillez me joindre par  [Email](mailto:romyklk22
 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
+[![Twitter Follow](https://img.shields.io/twitter/follow/romyklk?style=social)](https://twitter.com/romyklk)
+![GitHub followers](https://img.shields.io/github/followers/romyklk?style=social)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-romyklk-blue)](https://www.linkedin.com/in/romuald-kouleko/)
